@@ -1,13 +1,8 @@
 from fastapi import FastAPI
 
+from api.v1.router import api_v1_router
+
 app = FastAPI()
 
 
-@app.get('/hello')
-async def hello():
-    return {'message': 'Hello World'}
-
-
-@app.get('/hello/{specific_message}')
-async def hello_with_specific_message(specific_message):
-    return {'message': f'Hello, {specific_message}'}
+app.include_router(api_v1_router, prefix="/api/v1")
