@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastapi_sqlmodel"
+version = "0.1.0"
+description = "Project sample of FastAPI and SQLModel"
+authors = ["Miguel Cabrera <miguel.cabrera@system73.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.68.1"
+sqlmodel = "^0.0.4"
+uvicorn = {extras = ["standard"], version = "^0.15.0"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
